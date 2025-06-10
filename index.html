@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electro Cat | PLASM Coin</title>
+    <base target="_self">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            light: '#6366f1',
+                            dark: '#818cf8'
+                        },
+                        secondary: {
+                            light: '#f59e0b',
+                            dark: '#fbbf24'
+                        },
+                        plasm: {
+                            light: '#8b5cf6',
+                            dark: '#a78bfa'
+                        }
+                    },
+                    animation: {
+                        'spin-slow': 'spin 3s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .cat-ears {
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+        .lightning {
+            animation: flash 1.5s linear infinite;
+        }
+        .plasm-glow {
+            text-shadow: 0 0 8px rgba(139, 92, 246, 0.7);
+        }
+        @keyframes flash {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-700">
+            <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="relative w-12 h-18">
+                        <div class="C:\Users\Пользователь\Desktop\Новая папка\сайт\3.jpg"></div>
+                        <div class="C:\Users\Пользователь\Desktop\Новая папка\сайт\3.jpg">
+                            <div class="C:\Users\Пользователь\Desktop\Новая папка\сайт\3.jpg"><img src="img\logo.jpg"> </div>
+                        </div>
+                    </div>
+                    <h1 class="text-xl font-bold text-gray-900 dark:text-white">Electro Cat <span class="text-purple-500">PLASM</span></h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                        <i class="fas fa-moon dark:hidden text-gray-700"></i>
+                        <i class="fas fa-sun hidden dark:inline text-yellow-300"></i>
+                    </button>
+                    <button    class="px-4 py-2 bg-purple-500 hover:bg-purple-600 text-white rounded-full font-medium transition-colors type="button onclick="location.href='https://t.me/PLASM_Energy'">
+                        Telegram
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden py-16 md:py-24">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-b from-purple-500/10 to-transparent"></div>
+                <div class="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-purple-400/20 blur-3xl"></div>
+                <div class="absolute bottom-1/4 right-1/4 w-32 h-32 rounded-full bg-yellow-400/20 blur-3xl"></div>
+            </div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-10 md:mb-0">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                            <span class="text-purple-500 plasm-glow">$PLASM</span> - The Future Token <br>for <span class="text-yellow-500">Electro Cats</span>
+                        </h2>
+                        <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                            Plasma energy in the crypto world. Faster than light, brighter than lightning, and more powerful than a supercomputer.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <button class="px-6 py-3 bg-purple-500 hover:bg-purple-600 text-white rounded-full font-medium transition-colors flex items-centertype="button onclick="location.href='https://pump.fun/board'">
+                                Buy $PLASM <i class="fas fa-bolt ml-2"></i>
+                            </button>
+                            <button class="px-6 py-3 bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white rounded-full font-medium transition-colors flex items-center" type="button" onclick="location.href='img/Whitepaper.html'">
+                                Whitepaper <i class="fas fa-file-alt ml-2 type="button onclick="location.href='img/Whitepaper.html'"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <div class="relative w-64 h-64 md:w-80 md:h-80">
+                            <img src="img\Token1.png" alt="Electro Cat" class="w-full h-full object-contain animate-float">
+                            <div class="absolute -top-4 -right-4 w-16 h-16 text-yellow-400 lightning">
+                                <i class="fas fa-bolt text-5xl"></i>
+                            </div>
+                            <div class="absolute -bottom-2 -left-4 w-20 h-20 text-purple-400 animate-spin-slow">
+                                <i class="fas fa-atom text-5xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-16 bg-gray-100 dark:bg-gray-800">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">Why <span class="text-purple-500 plasm-glow">$PLASM</span>?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="w-14 h-14 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-atom text-2xl text-purple-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Plasma Technology</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Our blockchain runs on plasma energy, making it 1000x faster than competitors.</p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="w-14 h-14 bg-yellow-100 dark:bg-yellow-900 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-shield-alt text-2xl text-yellow-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Quantum Security</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Using quantum encryption - even Schrödinger's cat couldn't hack it.</p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="w-14 h-14 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-paw text-2xl text-purple-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Cat Energy</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Every $PLASM is charged with feline energy - scientifically proven!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tokenomics -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12"><span class="text-purple-500 plasm-glow">$PLASM</span> Tokenomics</h2>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2">
+                        <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg">
+                            <div class="flex justify-between items-center mb-6">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Token Distribution</h3>
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-500 dark:text-purple-300 rounded-full text-sm">1B $PLASM</span>
+                            </div>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-gray-700 dark:text-gray-300">Liquidity</span>
+                                        <span class="text-gray-900 dark:text-white font-medium">80%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                                        <div class="bg-purple-500 h-2.5 rounded-full" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-gray-700 dark:text-gray-300">Marketing</span>
+                                        <span class="text-gray-900 dark:text-white font-medium">10%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                                        <div class="bg-yellow-500 h-2.5 rounded-full" style="width: 10%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-gray-700 dark:text-gray-300">Team</span>
+                                        <span class="text-gray-900 dark:text-white font-medium">5%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                                        <div class="bg-green-500 h-2.5 rounded-full" style="width: 5%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-gray-700 dark:text-gray-300">Ecosystem</span>
+                                        <span class="text-gray-900 dark:text-white font-medium">5%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                                        <div class="bg-pink-500 h-2.5 rounded-full" style="width: 5%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Roadmap</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-purple-500 flex items-center justify-center text-white mr-4">
+                                        <i class="fas fa-flask"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 dark:text-white">Q1 2025</h4>
+                                        <p class="text-gray-600 dark:text-gray-300">Plasma reactor launch and initial testing</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-yellow-500 flex items-center justify-center text-white mr-4">
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 dark:text-white">Q2 2025</h4>
+                                        <p class="text-gray-600 dark:text-gray-300">Token launch and first plasma transactions</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-green-500 flex items-center justify-center text-white mr-4">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 dark:text-white">Q3 2025</h4>
+                                        <p class="text-gray-600 dark:text-gray-300">Exchange listings and plasma hype</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-pink-500 flex items-center justify-center text-white mr-4">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 dark:text-white">Q4 2025</h4>
+                                        <p class="text-gray-600 dark:text-gray-300">Plasma revolution across the universe</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meme Gallery -->
+        <section class="py-16 bg-gray-100 dark:bg-gray-800">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12"><span class="text-purple-500 plasm-glow">PLASM</span> Memes</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                        <img src="img\Luna.jpg" alt="Meme 1" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-gray-900 dark:text-white mb-2">When you see $PLASM pumping</h3>
+                            <div class="flex justify-between items-center">
+                                <div class="flex space-x-2">
+                                    <button class="text-gray-500 hover:text-purple-500">
+                                        <i class="far fa-heart"></i> 1.2K
+                                    </button>
+                                    <button class="text-gray-500 hover:text-purple-500">
+                                        <i class="far fa-share-square"></i>
+                                    </button>
+                                </div>
+                                <button class="text-purple-500 hover:text-purple-600 font-medium">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                        <img src="img\пепе 1.jpg" alt="Meme 2" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-gray-900 dark:text-white mb-2">PLASM vs other tokens</h3>
+                            <div class="flex justify-between items-center">
+                                <div class="flex space-x-2">
+                                    <button class="text-gray-500 hover:text-purple-500">
+                                        <i class="far fa-heart"></i> 2.4K
+                                    </button>
+                                    <button class="text-gray-500 hover:text-purple-500">
+                                        <i class="far fa-share-square"></i>
+                                    </button>
+                                </div>
+                                <button class="text-purple-500 hover:text-purple-600 font-medium">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                        <img src="img\3.jpg" alt="Meme 3" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Plasma energy in action</h3>
+                            <div class="flex justify-between items-center">
+                                <div class="flex space-x-2">
+                                    <button class="text-gray-500 hover:text-purple-500">
+                                        <i class="far fa-heart"></i> 3.1K
+                                    </button>
+                                    <button class="text-gray-500 hover:text-purple-500">
+                                        <i class="far fa-share-square"></i>
+                                    </button>
+                                </div>
+                                <button class="text-purple-500 hover:text-purple-600 font-medium">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-16 bg-purple-600">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold text-white mb-6">Ready for the <span class="text-yellow-300">plasma-powered</span> future?</h2>
+                <p class="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+                    Join the $PLASM revolution today - your wallet deserves plasma energy!
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button class="px-8 py-3 bg-white hover:bg-gray-100 text-purple-600 rounded-full font-bold transition-colors flex items-center type="button onclick="location.href='https://pump.fun/board'">
+                        Buy $PLASM <i class="fas fa-bolt ml-2 type="button onclick="location.href='https://pump.fun/board'"></i>
+                    </button>
+                    <button class="px-8 py-3 bg-purple-700 hover:bg-purple-800 text-white rounded-full font-bold transition-colors flex items-center type="button onclick="location.href='https://t.me/PLASM_Energy'">
+                        Join Community <i class="fab fa-telegram-plane ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-gray-300 py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <div class="relative w-12 h-10">
+                                <div class=""></div>
+                                <div class=""></div>
+                                <div class=""><img src="img\logo.jpg">
+                                    <div class=""></div>
+                                </div>
+                            </div>
+                            <span class="text-xl font-bold text-white">PLASM Coin</span>
+                        </div>
+                        <p class="mb-4">
+                            Plasma energy in the crypto world. Faster than light, brighter than lightning.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white type="button onclick="location.href='https://t.me/PLASM_Energy'">
+                                <i class="fab fa-telegram text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white">
+                                <i class="fab fa-twitter text-xl type="button onclick="location.href='https://t.me/PLASM_Energy'"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                    <p>© 2025 PLASM Coin. All rights reserved. Plasma rules the world.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        });
+
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+
+        // Connect wallet button
+        document.getElementById('connect-wallet').addEventListener('click', () => {
+            alert('Wallet connection functionality will be implemented in the future. For now, just imagine your wallet is connected!');
+        });
+
+        // Handle all anchor clicks
+        document.querySelectorAll('a').forEach(anchor => {
+            anchor.addEventListener('click', (e) => {
+                e.preventDefault();
+                const href = anchor.getAttribute('href');
+                if (href === '#') {
+                    alert('This is a demo link. In a real application, there would be navigation here.');
+                } else {
+                    alert(`Navigation to: ${href}`);
+                }
+            });
+        });
+
+        // Handle all button clicks
+        document.querySelectorAll('button:not(#theme-toggle):not(#connect-wallet)').forEach(button => {
+            if (!button.getAttribute('data-hs-overlay') && !button.classList.contains('hs-accordion-toggle')) {
+                button.addEventListener('click', () => {
+                    if (!button.classList.contains('hs-accordion-toggle')) {
+                        alert('This is a demo button. In a real application, there would be an action here.');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
